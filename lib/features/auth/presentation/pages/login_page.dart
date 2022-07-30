@@ -11,7 +11,6 @@ import 'package:flutter_blog_firebase/core/widgets/custom_pop_up.dart';
 import 'package:flutter_blog_firebase/features/auth/domain/failures.dart';
 import 'package:flutter_blog_firebase/features/auth/domain/use_cases/login_use_case.dart';
 import 'package:flutter_blog_firebase/features/auth/presentation/manager/login_bloc/login_bloc.dart';
-import 'package:flutter_blog_firebase/features/auth/presentation/manager/login_contract.dart';
 import 'package:flutter_blog_firebase/features/auth/presentation/widgets/custom_text_field.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
@@ -29,7 +28,7 @@ class LoginPage extends StatelessWidget {
   }
 }
 
-class LoginForm extends StatelessWidget implements LoginContract {
+class LoginForm extends StatelessWidget {
   final formKey = GlobalKey<FormState>();
   final scaffoldKey = GlobalKey<ScaffoldState>();
 
@@ -37,24 +36,6 @@ class LoginForm extends StatelessWidget implements LoginContract {
 
   @override
   Widget build(BuildContext context) {
-/*
-    final LoginParams loginParams = LoginParams(
-      emailAddress: EmailAddress('moohammed.gaber@gmail.com'),
-      password: Password('12345675'),
-    );
-    context
-        .read<LoginBloc>()
-        .loginUseCase
-        .authRepo
-        .login(loginParams.emailAddress, loginParams.password)
-        .then((value) => print(value));
-*/
-/*
-    final LoginPresenter loginPresenter = LoginPresenter(
-        LoginUseCase(AuthRepoImpl(AuthRemoteDataSource(FirebaseAuth.instance))),
-        this);
-*/
-
     return Scaffold(
       key: scaffoldKey,
       body: BlocListener<LoginBloc, LoginState>(
@@ -203,18 +184,5 @@ class LoginForm extends StatelessWidget implements LoginContract {
         ),
       ),
     );
-  }
-
-  @override
-  onLogin(LoginParams loginParams) async {
-    // loginPresenter.login(loginParams);
-  }
-
-  @override
-  onLoginFailure(AuthFailure failure) {}
-
-  @override
-  onLoginSuccess(UserEntity loggedUser) {
-    // Navigator.pushNamedAndRemoveUntil(context, newRouteName, (route) => false)
   }
 }

@@ -15,6 +15,7 @@ class RegisterState {
       required this.password});
 
   factory RegisterState.initial() {
+/*
     if (kDebugMode) {
       return RegisterState(
         email: EmailAddress('moohamedgaber@gmail.com'),
@@ -24,6 +25,7 @@ class RegisterState {
         password: Password('123456'),
       );
     }
+*/
     return RegisterState(
       email: EmailAddress(''),
       lastName: Name(''),

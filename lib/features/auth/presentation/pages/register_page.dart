@@ -36,8 +36,6 @@ class RegisterPage extends StatelessWidget {
       body: BlocListener<RegisterBloc, RegisterState>(
         listener: (context, state) {
           state.authFailureOrSuccessOption.fold(() {}, (a) {
-            print('-----');
-            print(state.authFailureOrSuccessOption);
             late final String message;
             a.fold((l) {
               if (l is InvalidEmailFailure) {
