@@ -23,6 +23,7 @@ class MyApp extends StatelessWidget {
     return ScreenUtilInit(
       designSize: const Size(360, 760),
       builder: (context, child) => MaterialApp(
+        debugShowCheckedModeBanner: false,
         navigatorKey: CustomNavigator.key,
         builder: (context, child) {
           return SafeArea(child: child!);

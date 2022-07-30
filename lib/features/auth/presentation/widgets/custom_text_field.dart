@@ -67,7 +67,9 @@ class _PasswordTextFieldState extends State<PasswordTextField> {
               obscureText: isVisible,
               decoration: InputDecoration()),
           IconButton(
-            icon: Icon(Icons.remove_red_eye),
+            icon: Icon(
+              isVisible ? Icons.visibility : Icons.visibility_off,
+            ),
             onPressed: () {
               setState(() {
                 isVisible = !isVisible;

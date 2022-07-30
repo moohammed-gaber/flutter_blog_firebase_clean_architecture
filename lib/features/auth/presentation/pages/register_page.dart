@@ -24,7 +24,15 @@ class RegisterPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Color(0xffF5F5F5),
-      appBar: AppBar(title: Text('إنشاء حساب')),
+      appBar: AppBar(
+          elevation: 0,
+          iconTheme: IconThemeData(color: Colors.black),
+          centerTitle: true,
+          title: Text(
+            'إنشاء حساب',
+            style: TextStyle(fontSize: 18.sp, color: Color(0xff2A5579)),
+          ),
+          backgroundColor: Color(0xffF5F5F5)),
       body: BlocListener<RegisterBloc, RegisterState>(
         listener: (context, state) {
           state.authFailureOrSuccessOption.fold(() {}, (a) {

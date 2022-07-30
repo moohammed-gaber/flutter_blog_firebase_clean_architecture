@@ -10,6 +10,10 @@ class AppTheme {
             borderRadius: BorderRadius.circular(10),
             borderSide: BorderSide.none,
           ),
+          focusedBorder: OutlineInputBorder(
+            borderRadius: BorderRadius.circular(10),
+            borderSide: BorderSide.none,
+          ),
         ),
         fontFamily: 'Almarai',
         colorScheme: ColorScheme.light(
