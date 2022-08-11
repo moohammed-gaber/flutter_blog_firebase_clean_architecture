@@ -1,4 +1,4 @@
-# Clean architecture, Riverpod approaches + Bloc + Sqflite + Firebase Auth & Firestore & Storage
+# Clean architecture, Riverpod approaches + Bloc + Sqflite + getit + Firebase Auth & Firestore & Storage
 
 
 ![alt text](https://github.com/moohammed-gaber/flutter_blog_firebase_clean_code/blob/master/assets/github_readme/2.PNG?raw=true)
